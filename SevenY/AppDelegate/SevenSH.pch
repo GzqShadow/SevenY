@@ -1,0 +1,19 @@
+//
+//  SevenSH.pch
+//  SevenY
+//
+//  Created by listome on 2017/11/21.
+//  Copyright © 2017年 listome. All rights reserved.
+//
+
+#ifndef SevenSH_pch
+#define SevenSH_pch
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//第三方
+//#import <YYKit/YYKit.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* SevenSH_pch */
