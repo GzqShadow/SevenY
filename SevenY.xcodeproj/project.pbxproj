@@ -20,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		327DAB371FC3B83B00E6D3FE /* SevenSH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SevenSH.pch; sourceTree = "<group>"; };
 		328236921FCCF87800ED4E95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		328248711FCE482700AEB35F /* MainTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarVC.h; sourceTree = "<group>"; };
 		328248721FCE482700AEB35F /* MainTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarVC.m; sourceTree = "<group>"; };
@@ -36,6 +35,14 @@
 		3289982F1FC2C26900150626 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		328998311FC2C26900150626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		328998321FC2C26900150626 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		329C80951FD67D77007D01E0 /* XYTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTransition.h; sourceTree = "<group>"; };
+		329C80961FD67D77007D01E0 /* XYTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYTransition.m; sourceTree = "<group>"; };
+		329C80971FD67D77007D01E0 /* XYTransitionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYTransitionProtocol.h; sourceTree = "<group>"; };
+		329C80991FD67E27007D01E0 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		329C809A1FD67E27007D01E0 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		329C809C1FD67EB2007D01E0 /* UIViewExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		329C809D1FD67EB2007D01E0 /* UIViewExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		329C80A31FD68584007D01E0 /* Myyy.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Myyy.pch; sourceTree = "<group>"; };
 		51702D66CD9A1546DEAAA659 /* Pods-SevenY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SevenY.release.xcconfig"; path = "Pods/Target Support Files/Pods-SevenY/Pods-SevenY.release.xcconfig"; sourceTree = "<group>"; };
 		9347008C452AF414422A32C1 /* libPods-SevenY.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SevenY.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC14FA2F5ADBD7BB42F5EFC9 /* Pods-SevenY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SevenY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SevenY/Pods-SevenY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,9 +71,9 @@
 		328248691FCE46BE00AEB35F /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				327DAB371FC3B83B00E6D3FE /* SevenSH.pch */,
 				328998231FC2C26900150626 /* AppDelegate.h */,
 				328998241FC2C26900150626 /* AppDelegate.m */,
+				329C80A31FD68584007D01E0 /* Myyy.pch */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -93,6 +100,8 @@
 		3282486C1FCE46ED00AEB35F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				329C809B1FD67EB2007D01E0 /* MyAdaptationClass */,
+				329C80941FD67D77007D01E0 /* XYTransition */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -100,6 +109,7 @@
 		3282486D1FCE46F400AEB35F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				329C80981FD67E27007D01E0 /* RootViewController */,
 				328248791FCE8B6400AEB35F /* BaseNavVC.h */,
 				3282487A1FCE8B6500AEB35F /* BaseNavVC.m */,
 			);
@@ -167,7 +177,8 @@
 		328998171FC2C26900150626 = {
 			isa = PBXGroup;
 			children = (
-				328998221FC2C26900150626 /* SevenY */,
+				328998221FC2C26900150626 /* SevenMy */,
+				329C809F1FD68190007D01E0 /* other */,
 				328998211FC2C26900150626 /* Products */,
 				ADC12287EBB78BB5AE8CA314 /* Pods */,
 				2AAC1A5911555AAC1C720C3C /* Frameworks */,
@@ -182,7 +193,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		328998221FC2C26900150626 /* SevenY */ = {
+		328998221FC2C26900150626 /* SevenMy */ = {
 			isa = PBXGroup;
 			children = (
 				328248691FCE46BE00AEB35F /* AppDelegate */,
@@ -195,6 +206,41 @@
 				3282486B1FCE46E500AEB35F /* Manager */,
 				328998261FC2C26900150626 /* ViewController.h */,
 				328998271FC2C26900150626 /* ViewController.m */,
+			);
+			path = SevenMy;
+			sourceTree = "<group>";
+		};
+		329C80941FD67D77007D01E0 /* XYTransition */ = {
+			isa = PBXGroup;
+			children = (
+				329C80951FD67D77007D01E0 /* XYTransition.h */,
+				329C80961FD67D77007D01E0 /* XYTransition.m */,
+				329C80971FD67D77007D01E0 /* XYTransitionProtocol.h */,
+			);
+			path = XYTransition;
+			sourceTree = "<group>";
+		};
+		329C80981FD67E27007D01E0 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				329C80991FD67E27007D01E0 /* RootViewController.h */,
+				329C809A1FD67E27007D01E0 /* RootViewController.m */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		329C809B1FD67EB2007D01E0 /* MyAdaptationClass */ = {
+			isa = PBXGroup;
+			children = (
+				329C809C1FD67EB2007D01E0 /* UIViewExt.h */,
+				329C809D1FD67EB2007D01E0 /* UIViewExt.m */,
+			);
+			path = MyAdaptationClass;
+			sourceTree = "<group>";
+		};
+		329C809F1FD68190007D01E0 /* other */ = {
+			isa = PBXGroup;
+			children = (
 				328998291FC2C26900150626 /* Main.storyboard */,
 				3289982C1FC2C26900150626 /* Assets.xcassets */,
 				3289982E1FC2C26900150626 /* LaunchScreen.storyboard */,
@@ -202,7 +248,7 @@
 				328998321FC2C26900150626 /* main.m */,
 				328236921FCCF87800ED4E95 /* Images.xcassets */,
 			);
-			path = SevenY;
+			path = other;
 			sourceTree = "<group>";
 		};
 		ADC12287EBB78BB5AE8CA314 /* Pods */ = {
@@ -482,7 +528,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CUU45WC97;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SevenY/SevenSH.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/listome/Desktop/SevenY/SevenMy/AppDelegate/Myyy.pch;
 				INFOPLIST_FILE = SevenY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -500,7 +547,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9CUU45WC97;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SevenY/SevenSH.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/listome/Desktop/SevenY/SevenMy/AppDelegate/Myyy.pch;
 				INFOPLIST_FILE = SevenY/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
